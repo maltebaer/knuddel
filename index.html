@@ -25,22 +25,6 @@
     >
     <title>knuddelbären</title>
     <style>
-        /* resets */
-        button {
-            border: none;
-            margin: 0;
-            padding: 0;
-            width: auto;
-            overflow: visible;
-            background: transparent;
-            color: inherit;
-            font: inherit;
-            line-height: normal;
-            -webkit-font-smoothing: inherit;
-            -moz-osx-font-smoothing: inherit;
-            -webkit-appearance: none;
-        }
-
         /* global styles */
         body {
             font-family: system-ui, sans-serif;
@@ -50,9 +34,6 @@
             margin: 0;
             height: 100dvh;
             background-color: aqua;
-        }
-
-        button {
             cursor: pointer;
         }
 
@@ -62,12 +43,12 @@
             text-align: center;
         }
 
-        #baer {
+        .baer {
             font-size: 5rem;
             will-change: transform;
         }
 
-        #baer:hover {
+        .baer:hover {
             animation: wiggle 1s ease-in-out infinite;
         }
 
@@ -89,7 +70,7 @@
 
 <body id="confetti">
     <div class="wrapper">
-        <button id="baer">🐻</button>
+        <div class="baer">🐻</div>
         <h1>hab euch lieb!</h1>
     </div>
 
@@ -104,7 +85,7 @@
             colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
         };
 
-        document.getElementById('baer').addEventListener('click', () => {
+        document.addEventListener('click', () => {
             confetti({
                 ...defaults,
                 particleCount: 50,
